@@ -9,7 +9,7 @@ async function syncDatabase() {
     }catch(err){
         console.error('Erro ao sincronizar o Banco de Dados!',err)
     }finally{
-        conn.close()
+        await conn.close()
         console.log('Fechando a conexão com o Banco de dados!')
     }
 }
